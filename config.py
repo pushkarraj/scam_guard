@@ -17,8 +17,8 @@ load_dotenv(PROJECT_ROOT / ".env")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # LLM Settings
-DEFAULT_MODEL = os.getenv("MODEL_NAME")
-MAX_RETRIES = os.getenv("MAX_RETRY")
+DEFAULT_MODEL = "gemini-2.5-flash"
+MAX_RETRIES = 3
 RETRY_DELAY = 2
 
 # Dataset Configuration

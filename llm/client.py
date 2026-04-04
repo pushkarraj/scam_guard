@@ -1,5 +1,6 @@
 from google import genai
 from utils import get_logger
+from config import GEMINI_API_KEY,MAX_RETRIES,RETRY_DELAY,DEFAULT_MODEL
 
 logger=get_logger(__name__)
 
