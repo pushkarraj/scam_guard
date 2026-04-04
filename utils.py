@@ -8,6 +8,7 @@ def get_logger(name:str) -> logging.Logger:
         level=logging.INFO,
         format="[%(asctime)s] %(levelname)s: %(message)s"
     )
+    return logging.getLogger(name)
 
 def extract_json_from_text(text: str) -> dict:
     """Extract JSON from text string. Returns empty dict if not found."""
