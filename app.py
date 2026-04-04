@@ -10,7 +10,7 @@ sys.path.append(str(project_root))
 import streamlit as st
 import pandas as pd
 from pipeline.scam_detector.detector import ScamDetector
-from evaluate import evaluate_model
+from evaluator import evaluate_model
 
 st.set_page_config(page_title="Scam Detection App", layout="wide")
 st.title("Scam Detection")

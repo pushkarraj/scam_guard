@@ -1,6 +1,7 @@
 from google import genai
 from utils import get_logger
 from config import GEMINI_API_KEY,MAX_RETRIES,RETRY_DELAY,DEFAULT_MODEL
+import time
 
 logger=get_logger(__name__)
 
@@ -32,5 +33,4 @@ class LLMClient:
             except Exception as e:
                 if attempt == self.max_retries:
                     raise Exception(f"API call failed after {self.max_retries + 1} attempts: {e}")
-                
                 time.sleep(self.retry_delay * (2 ** attempt))
